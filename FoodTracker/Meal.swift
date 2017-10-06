@@ -2,13 +2,14 @@
 //  Meal.swift
 //  FoodTracker
 //
-//  Created by 文淦泉 on 2017/10/6.
-//  Copyright © 2017年 文淦泉. All rights reserved.
+//  Created by Jane Appleseed on 11/10/16.
+//  Copyright © 2016 Apple Inc. All rights reserved.
 //
 
 import UIKit
 
-class Meal{
+
+class Meal {
     
     //MARK: Properties
     
@@ -18,15 +19,15 @@ class Meal{
     
     //MARK: Initialization
     
-    init?(name: String, photo: UIImage?, rating: Int){
+    init?(name: String, photo: UIImage?, rating: Int) {
         
-        // The name must not  be empty
+        // The name must not be empty
         guard !name.isEmpty else {
             return nil
         }
-        
+
         // The rating must be between 0 and 5 inclusively
-        guard (rating >= 0) && (rating <= 5) else{
+        guard (rating >= 0) && (rating <= 5) else {
             return nil
         }
         
