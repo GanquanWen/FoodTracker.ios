@@ -43,5 +43,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allows you to add photos to your meals.</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.749762144224-l6kndqnk1bmb7cd4s9p18opdks6luqit</string>
 </dict>
 </plist>
