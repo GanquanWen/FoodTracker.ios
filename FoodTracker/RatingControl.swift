@@ -12,7 +12,7 @@ import UIKit
     
     //MARK: Properties
     
-    private var ratingButtons = [UIButton]()
+    private var ratingButtons = [UIButton]()  //"private" only inside class RatingConrntrol can access this these buttons
     
     var rating = 0 {
         didSet {
@@ -20,6 +20,7 @@ import UIKit
         }
     }
     
+    /*"@IBInspectable" To update the control, you need to reset the control’s buttons every time these attributes change. To do that, add a property observer to each property. A property observer observes and responds to changes in a property’s value. Property observers are called every time a property’s value is set, and can be used to perform work immediately before or after the value changes.*/
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
             setupButtons()
@@ -85,7 +86,7 @@ import UIKit
             // Create the button
             let button = UIButton()
             
-            // Set the button images
+            // Set the button images. Buttons have five different states: normal, highlighted, focused, selected, and disabled. A button can be in more than one state at the same time
             button.setImage(emptyStar, for: .normal)
             button.setImage(filledStar, for: .selected)
             button.setImage(highlightedStar, for: .highlighted)
@@ -117,7 +118,7 @@ import UIKit
             // If the index of a button is less than the rating, that button should be selected.
             button.isSelected = index < rating
             
-            // Set accessibility hint and value
+            // Set accessibility hint and value. When the user runs your app with VoiceOver enabled, when they touch one of the buttons, VoiceOver reads the button’s label, followed by the word button.
             let hintString: String?
             if rating == index + 1 {
                 hintString = "Tap to reset the rating to zero."

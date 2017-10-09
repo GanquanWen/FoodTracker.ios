@@ -12,6 +12,7 @@ import os.log
 class Meal: NSObject, NSCoding {
     
     //MARK: Properties
+    // You’re making these variables (var) instead of constants (let) because they’ll need to change throughout the course of a Meal object’s lifetime.
     
     var name: String
     var photo: UIImage?
@@ -34,6 +35,7 @@ class Meal: NSObject, NSCoding {
     
     init?(name: String, photo: UIImage?, rating: Int) {
         
+        // Initialization should fail if there is no name or if the rating is negative.
         // The name must not be empty
         guard !name.isEmpty else {
             return nil
