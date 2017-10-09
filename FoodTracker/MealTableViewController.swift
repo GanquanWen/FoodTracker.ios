@@ -8,8 +8,10 @@
 
 import UIKit
 import os.log
+import Firebase
+import GoogleSignIn
 
-class MealTableViewController: UITableViewController {
+class MealTableViewController: UITableViewController, GIDSignInUIDelegate {
     
     //MARK: Properties
     
@@ -17,7 +19,10 @@ class MealTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+            GIDSignIn.sharedInstance().uiDelegate = self
+            GIDSignIn.sharedInstance().signIn()
+            
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         

@@ -12,4 +12,7 @@ target 'FoodTracker' do
     # Pods for testing
   end
 pod 'FirebaseUI', '~> 4.0'    
+pod ‘Firebase/Auth’
+pod ‘GoogleSignIn’
+
 end

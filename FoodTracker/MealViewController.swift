@@ -8,6 +8,8 @@
 
 import UIKit
 import os.log
+import Firebase
+import GoogleSignIn
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
